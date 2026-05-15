@@ -1,0 +1,46 @@
+Entradas e saídas
+As entradas são responsáveis pela alimentação do arduíno. Elasligam com os potenciômetros que controlam tempo e abertura da comporta.
+As saídas são por onde o Arduíno controla os componentes do sistema, O motor servo é a principal saída, abre e fecha a comporta. Os leds também são saídas, indicando o estado do projeto.
+
+Componentes:
+Arduíno: Principal controlador do projeto.
+Botão: Aciona os processos.
+2 potenciômetros. Um controla o tempo de abertura da comporta e o outro o ângulo de abertura.
+Servo motor: Representa a comporta. Abrindo e fechando.
+Leds: Representam o estágio de funcionamento do projeto.
+Resistores. Protegem os leds de altas voltagens.
+Protoboard e fios: São responsáveis pelas ligações.
+
+       3. Regras de funcionamento:
+                  
+O sistema inicia parado.
+O LED vermelho permanece ligado indicando espera.
+O Arduino aguarda o operador pressionar o botão.
+Quando o botão for pressionado:
+O sistema lê o potenciômetro do tempo.
+O sistema lê o potenciômetro do ângulo.
+O valor do primeiro potenciômetro é convertido para um tempo entre 1 e 10 segundos.
+O valor do segundo potenciômetro é convertido para um ângulo entre 0° e 180°.
+O servo motor abre a comporta conforme o ângulo definido.
+O LED amarelo acende indicando processo em execução.
+O sistema permanece funcionando pelo tempo configurado.
+Após o tempo terminar:
+O servo retorna para posição inicial.
+O LED amarelo apaga.
+O LED verde acende indicando finalização.
+O sistema não pode reiniciar enquanto já estiver executando.
+Depois da finalização, o sistema retorna ao estado inicial.
+
+
+       4. Uso do IF
+
+Os if servem para tomar decisões no sistema.
+Exemplos:
+if (botao == HIGH)
+Verifica se o botão foi pressionado.
+if (emExecucao == false)
+Impede iniciar o sistema novamente durante a execução.
+if (tempoAtual >= tempoDefinido)
+Verifica se o tempo terminou para fechar o servo.
+
+
