@@ -43,4 +43,5 @@ Impede iniciar o sistema novamente durante a execução.
 if (tempoAtual >= tempoDefinido)
 Verifica se o tempo terminou para fechar o servo.
 
+Link: https://www.tinkercad.com/things/16RK3Eds73D-dazzling-bruticus
 
